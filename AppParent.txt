@@ -1,3 +1,2 @@
-Site pour la documentation de blazor:
-https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/blazor/project-structure.md 
+
 
