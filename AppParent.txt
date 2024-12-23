@@ -1,1 +1,53 @@
-hello world
+Site pour la documentation de blazor:
+https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/blazor/project-structure.md 
+
+https://github.com/cornflourblue/blazor-webassembly-registration-login-example
+
+
+Projet principal
+
+IDEE PRINCIPALE : 
+	une application affiche le lycee auquel tu est assigne en fonction
+	de ton numero identifiant ou NO PV
+
+IDEE SECONDAIRE :
+	Les administrateurs ou proviseurs peuvent changer une administration
+
+	Des informations seront mises a la disponibilite des utilisateurs :
+								      La date de la rentree scolaire de l'etablissement 
+								      la localisation
+								      La classe dans lequel on est affecte
+								      Prevoir un delai pour l'inscription
+								      Prevoir un paiement en ligne pour la scolarite
+								      Le numero de l'etablissement pour prendre plus d'informations aupres des services adaptes
+								      Le Programme de l'étudient 
+
+	Des actions pourront etres faites par les utilisateurs comme :             
+								     Des requetes: 
+										Une demande de modification de l' administration(idee a confirmer)
+							             Ou prendre un rendez vous
+								     Paiement de la scolarite
+								     Reservation de place dans la classe
+base de donne :
+	Tables :
+		Utilisateur
+		InfosEtablissement
+		Etablissement
+		ClasseEtablissement
+		
+		
+
+
+
+
+
+LAPTOP-EPSLT7GU\MSSQLSERVER01
+
+
+
+
+scaffold-dbcontext -provider Microsoft.EntityFrameworkCore.SqlServer -connection "Data Source=LAPTOP-EPSLT7GU\\MSSQLSERVER01;Initial Catalog=BDEtab;MultipleActiveResultSets=true;TrustServerCertificate=True"-outputdir "Models" -ContextDir "Data"
+
+
+
+
