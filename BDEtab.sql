@@ -66,3 +66,39 @@ CREATE TABLE PhotoEleve (
 );
 
 
+
+
+
+//contraintes ----------------------------------------------
+
+
+USE BDEtab;
+
+
+ALTER TABLE Classe
+ADD 
+    CONSTRAINT FK_Classe_Etablissement FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement) ON DELETE NO ACTION;
+
+-- Contrainte pour la table Cour
+ALTER TABLE Cour
+ADD 
+    CONSTRAINT FK_Cour_Classe FOREIGN KEY (idClasse) REFERENCES Classe(idClasse) ON DELETE NO ACTION;
+
+-- Contrainte pour la table Notifications
+ALTER TABLE Notifications
+ADD 
+    CONSTRAINT FK_Notifications_Eleve FOREIGN KEY (noPv) REFERENCES Eleve(noPv) ON DELETE NO ACTION,
+    CONSTRAINT FK_Notifications_Etablissement FOREIGN KEY (idEtablissement) REFERENCES Etablissement(idEtablissement) ON DELETE NO ACTION;
+
+-- Contrainte pour la table PhotoEleve
+ALTER TABLE PhotoEleve
+ADD 
+    CONSTRAINT FK_PhotoEleve_Eleve FOREIGN KEY (noPv) REFERENCES Eleve(noPv) ON DELETE NO ACTION;
+
+-- Contrainte pour les colonnes uniques
+ALTER TABLE Eleve
+ADD CONSTRAINT UQ_Eleve_Courriel UNIQUE (courriel);
+
+ALTER TABLE Eleve
+ADD CONSTRAINT UQ_Eleve_MotDePasse UNIQUE (motDePasse);
+

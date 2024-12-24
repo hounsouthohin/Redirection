@@ -46,7 +46,7 @@ LAPTOP-EPSLT7GU\MSSQLSERVER01
 
 
 
-scaffold-dbcontext -provider Microsoft.EntityFrameworkCore.SqlServer -connection "Data Source=LAPTOP-EPSLT7GU\\MSSQLSERVER01;Initial Catalog=BDEtab;MultipleActiveResultSets=true;TrustServerCertificate=True"-outputdir "Models" -ContextDir "Data"
+scaffold-dbcontext -provider Microsoft.EntityFrameworkCore.SqlServer -connection 'Data Source=LAPTOP-EPSLT7GU\MSSQLSERVER01;Initial Catalog=BDEtab;User ID=Arthur;Password=prog3e3;MultipleActiveResultSets=True;TrustServerCertificate=True'-outputdir "Models" -ContextDir "Data" -DataAnnotations -tables Etablissement, Classe, Cour, PhotoEleve, Notifications, Eleve -Force
 
 
 

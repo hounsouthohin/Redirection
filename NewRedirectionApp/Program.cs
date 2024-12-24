@@ -16,7 +16,7 @@ namespace NewRedirectionApp
 
             var conStrBuilder =
                 new SqlConnectionStringBuilder(builder.Configuration.GetConnectionString("DefaultConnection"));
-
+            conStrBuilder.Password = builder.Configuration["password"];
 
             builder.Services.AddPooledDbContextFactory<NewRedirectionContext>(
     x => x.UseSqlServer(conStrBuilder.ConnectionString));
